@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Noel’s Log">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#13271E">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src https: data:; connect-src https://api.themoviedb.org https://www.omdbapi.com https://openlibrary.org https://api.rawg.io; base-uri 'none'; form-action 'none'; object-src 'none'; frame-src 'none'">
+<title>Noel’s Log</title>
+<style>
+:root{--bg:#EFF2EE;--sf:#fff;--ink:#17211C;--mut:#5A6A61;--ln:#D8DFDA;--h1:#2F6B4F;--h2:#8DBFA2;--h3:#13271E;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1512;--sf:#19221D;--ink:#EDF3EE;--mut:#9BADA2;--ln:#2A3730;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1512;--sf:#19221D;--ink:#EDF3EE;--mut:#9BADA2;--ln:#2A3730;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%;-webkit-text-size-adjust:100%}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;min-height:100%;background:var(--bg);background-image:radial-gradient(var(--ln) 1.2px,transparent 1.6px);background-size:22px 22px;color:var(--ink);font:16px/1.45 "Avenir Next","Avenir","Segoe UI",system-ui,-apple-system,sans-serif;padding-bottom:96px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--h1);z-index:20}
+body.lib::before{background:var(--bg)}
+main{max-width:560px;margin:0 auto}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+button:focus-visible,[role=button]:focus-visible,a:focus-visible{outline:3px solid var(--h2);outline-offset:2px}
+a{color:inherit}
+.hero{position:relative;overflow:hidden;color:#fff;min-height:540px;display:flex;flex-direction:column;padding:14px 20px 24px;border-radius:0 0 34px 34px;background:radial-gradient(110% 70% at 90% 0%,var(--h2) 0%,transparent 62%),linear-gradient(170deg,var(--h1) 0%,var(--h3) 100%)}
+.hero::after{content:"";position:absolute;right:-110px;top:70px;width:330px;height:330px;border-radius:50%;border:2px solid rgba(255,255,255,.2);pointer-events:none}
+.hp{position:absolute;inset:0;background-size:cover;background-position:center top;opacity:.3;-webkit-mask-image:linear-gradient(180deg,#000 25%,transparent 85%);mask-image:linear-gradient(180deg,#000 25%,transparent 85%);pointer-events:none}
+.bar{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.03em}
+.bar div,.lb{display:flex;gap:8px}
+.ib{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.18);font-size:22px;line-height:1;display:grid;place-items:center;color:#fff}
+.ib.d{background:var(--sf);border:1px solid var(--ln);color:var(--ink)}
+.body{margin-top:auto;position:relative;z-index:1}
+.body.hin{animation:hin .45s ease}
+@keyframes hin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.body.hin{animation:none}}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:99px;background:rgba(255,255,255,.2);font-weight:600;font-size:14px}
+.chip i{width:9px;height:9px;border-radius:50%;background:var(--cat)}
+h1{font-size:clamp(44px,13vw,74px);line-height:.96;font-weight:800;letter-spacing:-.035em;margin:14px 0 8px;text-wrap:balance;overflow-wrap:anywhere}
+.meta{font-size:17px;opacity:.92;margin:0 0 18px}
+.cta{display:flex;align-items:center;gap:14px}
+.go{flex:1;background:#fff;color:#17211C;font-weight:800;font-size:17px;padding:15px 18px;border-radius:16px;text-align:left}
+.ring{position:relative;width:58px;height:58px;flex:none}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font-size:14px}
+.cap{margin:20px 0 2px;font-size:14px;opacity:.85}
+.ch{width:100%;height:auto;display:block;overflow:visible}
+.ch .cv{fill:#fff;font-size:11px;font-weight:700;font-family:inherit}
+.ch .cl{fill:rgba(255,255,255,.78);font-size:10px;font-family:inherit}
+h2{font-size:21px;font-weight:800;letter-spacing:-.02em;margin:26px 20px 12px}
+.note{margin:-6px 20px 12px;font-size:14px;color:var(--mut)}
+.strip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 20px 6px;scrollbar-width:none}
+.strip::-webkit-scrollbar{display:none}
+.pc{flex:none;width:140px;height:204px;border-radius:20px;scroll-snap-align:start;position:relative;overflow:hidden;color:#fff;text-align:left;padding:12px;display:flex;flex-direction:column;justify-content:space-between;border:2px solid transparent}
+.pc.on{border-color:var(--ink)}
+.pc i{width:12px;height:12px;border-radius:50%;background:var(--cat);box-shadow:0 0 0 3px rgba(255,255,255,.35)}
+.pc span{font-weight:800;font-size:20px;line-height:1.05;letter-spacing:-.02em;overflow-wrap:anywhere}
+.pc em{position:absolute;left:0;bottom:0;height:6px;background:rgba(255,255,255,.9)}
+.pc i,.pc span{position:relative;z-index:1}
+.pc.add{background:var(--sf);color:var(--ink);border:2px dashed var(--ln);align-items:center;justify-content:center;gap:6px;text-align:center}
+.pc.add b{font-size:34px;line-height:1;font-weight:400}
+.pc.add span{font-size:15px;font-weight:700}
+[data-p]{position:relative;overflow:hidden}
+[data-p]::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0}
+[data-p=dots]::before{background:radial-gradient(rgba(255,255,255,.28) 1.5px,transparent 2px) 0 0/18px 18px}
+[data-p=stripes]::before{background:repeating-linear-gradient(135deg,rgba(255,255,255,.13) 0 2px,transparent 2px 14px)}
+[data-p=grid]::before{background:linear-gradient(rgba(255,255,255,.13) 1px,transparent 1px) 0 0/22px 22px,linear-gradient(90deg,rgba(255,255,255,.13) 1px,transparent 1px) 0 0/22px 22px}
+[data-p=rings]::before{background:repeating-radial-gradient(circle at 100% 0,rgba(255,255,255,.14) 0 2px,transparent 2px 16px)}
+.hero[data-p]::before{-webkit-mask-image:linear-gradient(180deg,#000,transparent 78%);mask-image:linear-gradient(180deg,#000,transparent 78%)}
+/* Chips und Historie */
+.weeks{display:flex;gap:8px;overflow-x:auto;padding:0 20px 4px;margin:0 0 12px;scrollbar-width:none}
+.weeks::-webkit-scrollbar{display:none}
+.weeks button,.sm button,.sug button{flex:none;padding:8px 15px;border-radius:99px;background:var(--sf);border:1px solid var(--ln);font-weight:600;font-size:14px;color:var(--mut);white-space:nowrap}
+.weeks button.on,.sm button.on{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.wk{margin:0 20px 14px;padding:4px 16px 2px;background:var(--sf);border:1px solid var(--ln);border-radius:24px}
+.wk.empty{padding:20px 16px;color:var(--mut)}
+.wkh{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;padding:14px 0 12px;border-bottom:1px solid var(--ln)}
+.wkh b{display:inline-block;font-size:22px;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.wkh .now{font-style:normal;font-size:12px;font-weight:700;margin-left:8px;padding:2px 8px;border-radius:99px;background:var(--h2);color:#13271E;vertical-align:3px}
+.wkh span{display:block;font-size:13px;color:var(--mut);margin-top:2px}
+.wkh em{font-style:normal;font-size:13px;color:var(--mut);text-align:right;line-height:1.35}
+.ent{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;padding:12px 0;cursor:pointer}
+.ent+.ent{border-top:1px solid var(--ln)}
+.th{width:44px;height:58px;border-radius:10px;background-size:cover;background-position:center}
+.et{min-width:0}
+.et b{display:block;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.et small{display:block;color:var(--mut);font-size:13px;line-height:1.35}
+.sb{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:18px;font-weight:800;color:#13271E}
+.sb.hi{background:#7FC79F}.sb.mid{background:#B9C98A}.sb.lo{background:#D9AE5C}
+.sb.run{background:var(--ink);color:var(--bg);font-size:13px}
+.sb.no{background:var(--bg);color:var(--mut);border:1px solid var(--ln);font-weight:600}
+.more{display:block;width:calc(100% - 40px);margin:0 20px 14px;padding:13px;border-radius:16px;border:1px dashed var(--ln);font-weight:600;color:var(--mut)}
+/* Übersicht */
+.card{margin:0 20px 14px;padding:18px;background:var(--sf);border-radius:24px;border:1px solid var(--ln)}
+.card h3{margin:0 0 2px;font-size:18px;font-weight:800;letter-spacing:-.02em}
+.sub{color:var(--mut);font-size:14px;margin:0 0 14px}
+.seg,.rng{display:grid;gap:4px;background:var(--bg);padding:4px;border-radius:14px;margin:0 0 12px}
+.seg{grid-template-columns:repeat(2,1fr)}
+.seg.t3{grid-template-columns:repeat(3,1fr)}
+.rng{grid-template-columns:repeat(4,1fr)}
+.seg button,.rng button{padding:8px 4px;border-radius:10px;font-weight:600;font-size:14px;line-height:1.2;text-align:center;white-space:nowrap;color:var(--mut)}
+.seg button.on,.rng button.on{background:var(--ink);color:var(--bg)}
+.stack{display:flex;height:22px;border-radius:11px;overflow:hidden;gap:3px;margin:16px 0}
+.stack i{display:block;height:100%}
+.hb{display:grid;grid-template-columns:104px 1fr 62px;gap:10px;align-items:center;margin:9px 0;font-size:15px}
+.hb u,.gb u{text-decoration:none;display:block;height:12px;border-radius:6px;background:var(--bg);overflow:hidden}
+.hb u i,.gb u i{display:block;height:100%;border-radius:6px}
+.hb span:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.gb{display:grid;grid-template-columns:96px 1fr 92px;gap:10px;align-items:center;margin:9px 0;font-size:14px}
+.gb span:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:600;font-size:13px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 20px 14px}
+.tiles.t2{grid-template-columns:repeat(2,1fr);margin:0 0 14px}
+.tile{padding:14px 10px;border-radius:20px;background:var(--sf);border:1px solid var(--ln)}
+.tile b{display:block;font-size:22px;font-weight:800;letter-spacing:-.03em;line-height:1.1;overflow-wrap:anywhere}
+.tile small{color:var(--mut);font-size:13px;line-height:1.2;display:block;margin-top:4px}
+.hist{display:flex;align-items:flex-end;gap:6px;height:110px}
+.hist div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:4px;height:100%;font-size:12px;color:var(--mut)}
+.hist i{display:block;width:100%;border-radius:6px 6px 2px 2px;background:var(--h2)}
+#hist i{height:2px;transition:height .9s cubic-bezier(.2,.8,.2,1)}
+.stack i,.hb u i{width:0;transition:width .9s cubic-bezier(.2,.8,.2,1)}
+/* Bibliothek */
+.lh{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;padding:14px 20px 12px}
+.lh h1{font-size:36px;margin:0;line-height:1}
+.lh .sub{margin:4px 0 0}
+.srt{align-items:center}
+.srt .lbl{flex:none;color:var(--mut);font-size:13px;font-weight:600}
+.srt button{padding:6px 12px;font-size:13px}
+.gg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 20px 14px}
+.gc{position:relative;aspect-ratio:2/3;border-radius:16px;overflow:hidden;color:#fff;text-align:left;padding:8px;display:flex;flex-direction:column;justify-content:flex-end;background-size:cover;background-position:center}
+.gc span{position:relative;z-index:1;font-weight:700;font-size:14px;line-height:1.15;overflow-wrap:anywhere;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+.gc .sb{position:absolute;top:8px;right:8px;width:34px;height:34px;font-size:14px;z-index:1}
+.empty{margin:10px 20px;padding:24px 16px;text-align:center;color:var(--mut);background:var(--sf);border:1px dashed var(--ln);border-radius:20px}
+/* Navigation unten */
+nav{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--sf);border-top:1px solid var(--ln);padding-bottom:env(safe-area-inset-bottom,0px)}
+nav div{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);padding:6px 6px 4px}
+nav button{display:flex;flex-direction:column;align-items:center;gap:3px;padding:2px 0 3px;font-size:12px;font-weight:600;letter-spacing:.01em;line-height:1.2;color:var(--mut)}
+.ni{display:grid;place-items:center;width:56px;height:30px;border-radius:15px;transition:background .2s}
+.ni svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+nav button.on{color:var(--ink)}
+nav button.on .ni{background:color-mix(in srgb,var(--cat,#8DBFA2) 26%,transparent)}
+/* Sheets */
+dialog.sheet{width:min(560px,100%);max-width:100%;border:0;border-radius:28px 28px 0 0;background:var(--bg);color:var(--ink);padding:0;margin:auto auto 0;overflow:hidden;max-height:92vh;max-height:92dvh}
+dialog.sheet.tall{height:92vh;height:92dvh}
+dialog.sheet[open]{display:flex;flex-direction:column;animation:up .3s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{transform:translateY(46px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){dialog.sheet[open]{animation:none}}
+dialog.sheet::backdrop{background:rgba(8,10,24,.55);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.grab{outline:none;flex:none;width:40px;height:5px;border-radius:3px;background:var(--ln);margin:10px auto 6px}
+.x{flex:none;width:40px;height:40px;border-radius:50%;background:var(--sf);border:1px solid var(--ln);font-size:16px;line-height:1;color:var(--mut)}
+.mh{flex:none;display:flex;justify-content:space-between;align-items:center;padding:4px 16px 12px 20px}
+.mh h3{margin:0;font-size:24px;font-weight:800;letter-spacing:-.03em}
+.sbody{flex:1;min-height:0;overflow-y:auto;padding:2px 16px calc(24px + env(safe-area-inset-bottom,0px));-webkit-overflow-scrolling:touch}
+.sbody .sub{margin:0 0 12px}
+#menu{padding-bottom:calc(8px + env(safe-area-inset-bottom,0px))}
+.mg{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 16px 10px}
+.mt,.mw{text-align:left;background:var(--sf);border:1px solid var(--ln);border-radius:22px}
+.mt{display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:16px}
+.mt b,.mw b{display:block;font-size:17px;font-weight:700;letter-spacing:-.01em}
+.mt small,.mw small{display:block;color:var(--mut);font-size:13px;line-height:1.3}
+.mt .mi2{margin-bottom:10px}
+.mi2{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:15px;background:color-mix(in srgb,var(--c) 24%,transparent)}
+.mi2 svg{width:23px;height:23px;fill:none;stroke:var(--ink);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.mw{display:flex;align-items:center;gap:14px;width:calc(100% - 32px);margin:0 16px 6px;padding:14px 16px}
+.mw>div{flex:1;min-width:0}
+.mw>svg{flex:none;width:20px;height:20px;fill:none;stroke:var(--mut);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sh{flex:none;display:flex;gap:10px;align-items:center;padding:6px 16px 12px}
+.sf{flex:1;min-width:0;display:flex;align-items:center;gap:10px;padding:0 14px;height:46px;border-radius:14px;background:var(--sf);border:1px solid var(--ln);margin:0 0 12px}
+.sh .sf{margin:0}
+.sf svg{flex:none;width:20px;height:20px;fill:none;stroke:var(--mut);stroke-width:2.2;stroke-linecap:round}
+.sf input{flex:1;min-width:0;border:0;background:none;outline:0;font:inherit;color:var(--ink);-webkit-appearance:none;appearance:none}
+.sf:focus-within{border-color:var(--h2);box-shadow:0 0 0 3px color-mix(in srgb,var(--h2) 30%,transparent)}
+.sm{flex:none;display:flex;gap:8px;overflow-x:auto;padding:0 16px 12px;scrollbar-width:none}
+.sm::-webkit-scrollbar{display:none}
+.sug{display:flex;flex-wrap:wrap;gap:8px}
+.sug button{color:var(--ink)}
+.sr{background:var(--sf);border:1px solid var(--ln);border-radius:20px;padding:2px 14px}
+/* Formulare */
+.fl{display:block;margin:0 0 14px}
+.fl>span{display:block;font-size:13px;font-weight:600;color:var(--mut);margin:0 0 6px}
+.in{width:100%;height:46px;padding:0 14px;border-radius:14px;background:var(--sf);border:1px solid var(--ln);font:inherit;color:var(--ink);outline:0;-webkit-appearance:none;appearance:none}
+textarea.in{height:auto;min-height:84px;padding:12px 14px;resize:vertical;display:block}
+.in:focus{border-color:var(--h2);box-shadow:0 0 0 3px color-mix(in srgb,var(--h2) 30%,transparent)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cr{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.cr button{padding:8px 14px;border-radius:99px;background:var(--sf);border:1px solid var(--ln);font-weight:600;font-size:14px;color:var(--mut)}
+.cr button.on{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.cr button.done{border-color:var(--h2);color:var(--ink)}
+.epg button{min-width:44px;padding:8px 0;text-align:center}
+.btn{display:block;width:100%;padding:15px;border-radius:16px;font-weight:700;font-size:17px;text-align:center;background:var(--sf);border:1px solid var(--ln)}
+.btn.pri{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.btn.dng{color:#D6403A}
+.btn+.btn{margin-top:10px}
+.sticky{position:sticky;bottom:-1px;padding:14px 0 2px;background:linear-gradient(transparent,var(--bg) 28%)}
+.rg{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:0 0 14px}
+.rg button{height:52px;border-radius:14px;background:var(--sf);border:1px solid var(--ln);font-size:20px;font-weight:800}
+.rg button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.ft{font-size:20px;font-weight:800;letter-spacing:-.02em;margin:0 0 14px}
+.warn{font-size:13px;color:var(--mut);margin:-6px 0 14px}
+.res{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:center;width:100%;text-align:left;padding:10px 0}
+.res+.res{border-top:1px solid var(--ln)}
+.res b{display:block;font-weight:600;overflow-wrap:anywhere}
+.res small{color:var(--mut);font-size:13px}
+.err{color:#D6403A;font-size:14px;margin:0 0 12px}
+/* Detail */
+.dh{position:relative;overflow:hidden;border-radius:24px;color:#fff;padding:16px;display:flex;gap:14px;align-items:flex-end;min-height:150px;margin:0 0 12px}
+.dpi{flex:none;width:92px;aspect-ratio:2/3;object-fit:cover;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.4)}
+.di{position:relative;z-index:1;min-width:0}
+.di h2{margin:8px 0 4px;font-size:28px;line-height:1.05;letter-spacing:-.03em;overflow-wrap:anywhere}
+.di p{margin:0;opacity:.9;font-size:14px}
+.scs{display:grid;grid-template-columns:repeat(auto-fit,minmax(92px,1fr));gap:8px;margin:0 0 12px}
+.s3{padding:12px 10px;border-radius:18px;background:var(--sf);border:1px solid var(--ln)}
+.s3 b{display:block;font-size:22px;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.s3 small{display:block;color:var(--mut);font-size:12px;margin-top:3px;line-height:1.2}
+.s3.me{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.s3.me small{color:inherit;opacity:.75}
+.hc{border-radius:20px;padding:12px 14px 6px;color:#fff;margin:0 0 12px}
+.hc .cap{margin:0 0 4px}
+.sec{margin:18px 0 8px;font-size:13px;font-weight:700;color:var(--mut);letter-spacing:.04em;text-transform:uppercase}
+.sr2{display:grid;grid-template-columns:78px 1fr auto;gap:10px;align-items:center;margin:8px 0;font-size:14px}
+.sr2 u{text-decoration:none;display:block;height:10px;border-radius:5px;background:var(--bg);overflow:hidden}
+.sr2 u i{display:block;height:100%;border-radius:5px;background:var(--h2)}
+.sr2 span:last-child{color:var(--mut);font-size:13px;text-align:right}
+.pbar{height:12px;border-radius:6px;background:var(--bg);overflow:hidden;margin:6px 0 10px}
+.pbar i{display:block;height:100%;border-radius:6px;background:var(--h2)}
+.rl{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:10px 0}
+.rl+.rl{border-top:1px solid var(--ln)}
+.rl b{font-weight:600}.rl small{display:block;color:var(--mut);font-size:13px;overflow-wrap:anywhere}
+.rl .sb{width:38px;height:38px;font-size:16px}
+.rl .del{width:34px;height:34px;border-radius:50%;color:var(--mut);border:1px solid var(--ln)}
+.card.plain{margin:0 0 12px}
+input[type=range]{width:100%;accent-color:var(--h2)}
+.ov{font-size:15px;color:var(--mut);margin:0 0 12px}
+.star{padding:6px 10px;color:#D9AE5C;font-size:18px}
+#toast{position:fixed;left:50%;bottom:104px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:1000;max-width:90%;text-align:center}
+#toast.on{opacity:1}
+/* Bewegung */
+.rv{transform:perspective(700px) translateY(var(--ry,0px)) scale(var(--rs,1)) rotateX(var(--tx,0deg)) rotateY(var(--ty,0deg));opacity:var(--ro,1);transition:transform .18s ease-out,opacity .18s ease-out;will-change:transform}
+.pc{transform:perspective(700px) rotateX(var(--tx,0deg)) rotateY(var(--ty,0deg)) scale(calc(var(--cs,1)*var(--ps,1)));transition:transform .2s ease-out}
+.hero::after{transform:translateY(calc(var(--sy,0)*.3px))}
+.hero .body{transform:translateY(calc(var(--sy,0)*.16px));opacity:calc(1 - var(--sy,0)/700)}
+@media (prefers-reduced-motion:reduce){.rv,.pc{transition:none}.stack i,.hb u i,#hist i{transition:none}}
+</style></head>
+<body><main>
+<div id="vh">
+  <section class="hero" id="hero">
+    <div class="hp" id="hp"></div>
+    <div class="bar"><span class="logo">Noel’s Log</span><div>
+      <button class="ib" aria-label="Suchen" onclick="openSearch()"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></button>
+      <button class="ib" aria-label="Hinzufügen" onclick="openAdd()">+</button>
+      <button class="ib" aria-label="Menü" onclick="openMenu()">⋯</button></div></div>
+    <div class="body" id="hb"></div>
+  </section>
+  <h2>Läuft gerade</h2>
+  <div class="strip" id="strip"></div>
+  <h2>Historie</h2>
+  <div class="weeks" id="weeks"></div>
+  <div id="log"></div>
+  <h2>Übersicht</h2>
+  <p class="note" id="on"></p>
+  <div class="tiles" id="tiles"></div>
+  <section class="card rv"><h3>Zeit im Vergleich</h3><p class="sub" id="ts"></p><div class="rng" id="rng"></div><div class="seg" id="seg"></div><div class="stack" id="stack"></div><div id="bars"></div></section>
+  <section class="card rv"><h3>Notenverteilung</h3><p class="sub">Wie oft du welche Note vergibst</p><div class="hist" id="hist"></div></section>
+</div>
+<div id="vl" hidden></div>
+</main>
+<nav><div id="nav"></div></nav>
+<dialog id="menu" class="sheet" onclick="bd(event)">
+  <div class="grab" tabindex="-1"></div>
+  <div class="mh"><h3>Mehr</h3><button class="x" aria-label="Schließen" onclick="closeS('menu')">✕</button></div>
+  <div class="mg">
+    <button class="mt" style="--c:#4F9C8A" onclick="openSheet('st')"><span class="mi2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V11M12 20V4M19 20v-7"/></svg></span><b>Statistik</b><small>Durchschnitt, Genres, Top 10</small></button>
+    <button class="mt" style="--c:#8FAF5E" onclick="openSheet('wl')"><span class="mi2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 4h11v16.5L12 16.5l-5.5 4z"/></svg></span><b>Merkliste</b><small>Was als Nächstes dran ist</small></button>
+  </div>
+  <button class="mw" style="--c:#7D8C99" onclick="openSheet('se')"><span class="mi2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h9M18 7h2M4 17h2M11 17h9"/><circle cx="15.5" cy="7" r="2.3"/><circle cx="8.5" cy="17" r="2.3"/></svg></span><div><b>Einstellungen und Backup</b><small id="bkinfo">Keys, Darstellung, Sicherung</small></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+</dialog>
+<dialog id="sd" class="sheet tall" onclick="bd(event)">
+  <div class="grab" tabindex="-1"></div>
+  <div class="sh">
+    <label class="sf"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input id="sq" type="search" placeholder="Titel, Genre, Medium oder KW" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-label="Suche" oninput="search()"></label>
+    <button class="x" aria-label="Schließen" onclick="closeS('sd')">✕</button>
+  </div>
+  <div class="sm" id="sm"></div>
+  <div class="sbody" id="sres"></div>
+</dialog>
+<div id="toast" role="status"></div>
+<script>
+/* ===== Grunddaten ===== */
+const KEY='noels-log-v1',DAY=864e5;
+const TY={film:{n:'Film',p:'Filme',c:'#C2704F'},serie:{n:'Serie',p:'Serien',c:'#4F9C8A'},buch:{n:'Buch',p:'Bücher',c:'#8FAF5E'},spiel:{n:'Spiel',p:'Spiele',c:'#7D8C99'}};
+const TK=Object.keys(TY),STS=['Aktuell','Geplant','Fertig'],PAT=['grid','stripes','rings','dots'],WT=['Mo','Di','Mi','Do','Fr','Sa','So'];
+const IMGOK=/^https:\/\/(image\.tmdb\.org|covers\.openlibrary\.org|media\.rawg\.io)\/[\w\-./%?=&]+$/;
+const safeImg=u=>typeof u==='string'&&u.length<300&&IMGOK.test(u)?u:'';
+const GEN={28:'Action',12:'Abenteuer',16:'Animation',35:'Komödie',80:'Krimi',99:'Dokumentarfilm',18:'Drama',10751:'Familie',14:'Fantasy',36:'Historie',27:'Horror',10402:'Musik',9648:'Mystery',10749:'Liebesfilm',878:'Science-Fiction',10770:'TV-Film',53:'Thriller',10752:'Kriegsfilm',37:'Western',10759:'Action',10762:'Kinder',10763:'Nachrichten',10764:'Reality',10765:'Science-Fiction',10766:'Soap',10767:'Talk',10768:'Politik'};
+const RG={Action:'Action',Adventure:'Abenteuer',RPG:'Rollenspiel',Strategy:'Strategie',Shooter:'Shooter',Simulation:'Simulation',Puzzle:'Puzzle',Platformer:'Jump ’n’ Run',Racing:'Rennspiel',Sports:'Sport',Fighting:'Kampf',Indie:'Indie',Casual:'Casual',Arcade:'Arcade',Family:'Familie'};
+const BASEG=['Thriller','Drama','Komödie','Fantasy','Science-Fiction','Krimi','Horror','Action','Abenteuer','Dokumentarfilm','Animation','Liebesfilm'];
+const ng=g=>({'Sci-Fi & Fantasy':'Science-Fiction','Science Fiction':'Science-Fiction','Action & Adventure':'Action'}[g]||g);
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const num=(v,d=0)=>{v=parseFloat(String(v).replace(',','.'));return isFinite(v)?v:d};
+const fmt=n=>n.toLocaleString('de-DE');
+const r1=n=>fmt(Math.round(n*10)/10);
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+const grad=c=>`linear-gradient(160deg,${c[0]},${c[2]})`;
+function hsh(s){let h=0;for(const ch of String(s))h=(h*31+ch.charCodeAt(0))>>>0;return h}
+const gcols=s=>{const a=95+hsh(s)%95;return [`hsl(${a} 34% 30%)`,`hsl(${a+14} 36% 62%)`,`hsl(${a} 32% 11%)`]};
+const GP=['#2F8F6B','#7D8C99','#C2704F','#8FAF5E','#D4A94A','#4F9C8A','#A7B3AA','#5E6F63'];
+const gcol=g=>GP[hsh(g)%GP.length];
+const ICS='<svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>';
+
+/* ===== Speicher ===== */
+function sane(x){
+  const o={v:1,items:[],R:[],cfg:{tmdb:'',omdb:'',rawg:'',theme:'auto'},lb:0,rm:0};
+  if(!x||typeof x!=='object')return o;
+  const sid=v=>typeof v==='string'&&/^[\w-]{1,30}$/.test(v)?v:'';
+  const str=(v,n)=>typeof v==='string'?v.slice(0,n):'';
+  const nn=(v,a,b)=>Math.min(b,Math.max(a,num(v)));
+  const ids=new Set();
+  (Array.isArray(x.items)?x.items:[]).slice(0,5000).forEach(i=>{
+    if(!i||!TY[i.type]||!sid(i.id)||ids.has(i.id)||!str(i.title,200).trim())return;
+    ids.add(i.id);
+    const it={id:i.id,type:i.type,title:str(i.title,200).trim(),y:Math.round(nn(i.y,0,2200))||'',genre:str(i.genre,40),poster:safeImg(i.poster),
+      status:STS.includes(i.status)?i.status:'Geplant',prio:Math.round(nn(i.prio,0,3)),note:str(i.note,2000),created:nn(i.created,0,9e12)||Date.now(),
+      ov:str(i.ov,600),sub:str(i.sub,80),tmdb:Math.round(nn(i.tmdb,0,1e9)),imdb:/^tt\d{5,10}$/.test(i.imdb||'')?i.imdb:'',
+      runtime:Math.round(nn(i.runtime,0,2000)),epMin:Math.round(nn(i.epMin,0,600)),total:Math.round(nn(i.total,0,5000)),
+      pages:Math.round(nn(i.pages,0,20000)),page:Math.round(nn(i.page,0,20000)),pct:Math.round(nn(i.pct,0,100)),
+      seasons:(Array.isArray(i.seasons)?i.seasons:[]).slice(0,60).map(s=>({n:Math.round(nn(s&&s.n,1,200)),c:Math.round(nn(s&&s.c,0,500))})),sc:{}};
+    ['imdb','rt','mc','tm'].forEach(k=>{const v=i.sc&&i.sc[k];if(typeof v==='string'&&/^[\d.,%\/ ]{1,12}$/.test(v))it.sc[k]=v});
+    o.items.push(it);
+  });
+  const rid=new Set();
+  (Array.isArray(x.R)?x.R:[]).slice(0,50000).forEach(r=>{
+    if(!r||!sid(r.id)||rid.has(r.id)||!ids.has(r.i))return;
+    rid.add(r.id);
+    o.R.push({id:r.id,i:r.i,ts:nn(r.ts,0,9e12)||Date.now(),n:Math.round(nn(r.n,1,10)),h:Math.round(nn(r.h,0,2000)*100)/100,lb:str(r.lb,40),s:Math.round(nn(r.s,0,200)),e:Math.round(nn(r.e,0,2000)),note:str(r.note,500)});
+  });
+  if(x.cfg&&typeof x.cfg==='object'){
+    ['tmdb','omdb','rawg'].forEach(k=>{const v=x.cfg[k];if(typeof v==='string'&&/^[\w\-.]{0,800}$/.test(v))o.cfg[k]=v});
+    if(['auto','light','dark'].includes(x.cfg.theme))o.cfg.theme=x.cfg.theme;
+  }
+  o.lb=nn(x.lb,0,9e12);o.rm=nn(x.rm,0,9e12);
+  return o;
+}
+let D=sane(null);
+function load(){try{const s=localStorage.getItem(KEY);if(s)D=sane(JSON.parse(s))}catch(e){D=sane(null)}}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(D))}catch(e){toast('Speichern im Browser nicht möglich')}}
+const item=id=>D.items.find(x=>x.id===id);
+function applyTheme(){const t=D.cfg.theme;if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;else delete document.documentElement.dataset.theme}
+
+/* ===== Abgeleitete Daten ===== */
+const sd=t=>{const d=new Date(t);return new Date(d.getFullYear(),d.getMonth(),d.getDate())};
+function wkOf(d){const t=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()));t.setUTCDate(t.getUTCDate()+4-(t.getUTCDay()||7));const w=Math.ceil(((t-Date.UTC(t.getUTCFullYear(),0,1))/DAY+1)/7);return {w,k:t.getUTCFullYear()*100+w}}
+let E=[];
+function derive(){
+  const today=sd(Date.now()),m=new Map(D.items.map(x=>[x.id,x]));
+  E=D.R.map(r=>{const it=m.get(r.i);if(!it)return null;const dt=sd(r.ts),w=wkOf(dt);
+    return {r,it,n:r.n,h:r.h,lb:r.lb,g:it.genre||'Sonstiges',c:it.type,dt,a:Math.max(0,Math.round((today-dt)/DAY)),w:w.w,k:w.k}}).filter(Boolean).sort((a,b)=>b.r.ts-a.r.ts);
+}
+const dl=e=>e.a===0?'Heute':e.a===1?'Gestern':e.dt.toLocaleDateString('de-DE',{weekday:'short',day:'numeric',month:'short'});
+function inote(it){const L=E.filter(e=>e.it===it);if(!L.length)return null;return it.type==='serie'?L.reduce((a,e)=>a+e.n,0)/L.length:L[0].n}
+function lastTs(it){const e=E.find(x=>x.it===it);return e?e.r.ts:it.created}
+const hoursOf=it=>E.filter(e=>e.it===it).reduce((a,e)=>a+e.h,0);
+function prog(it){
+  if(it.type==='serie'){const c=new Set(E.filter(e=>e.it===it&&e.r.s).map(e=>e.r.s+'-'+e.r.e)).size;return {c,t:it.total,p:it.total?Math.min(1,c/it.total):null}}
+  if(it.type==='buch')return {c:it.page,t:it.pages,p:it.pages?Math.min(1,it.page/it.pages):null};
+  if(it.type==='spiel')return {c:it.pct,t:100,p:it.pct>0?it.pct/100:null};
+  return {c:0,t:0,p:null};
+}
+function nextEp(it){
+  const L=D.R.filter(r=>r.i===it.id&&r.s).sort((a,b)=>a.s-b.s||a.e-b.e).pop();
+  if(!L)return {s:1,e:1};
+  const ss=it.seasons||[],c=ss.find(x=>x.n===L.s);
+  if(c&&c.c&&L.e>=c.c){const nx=ss.find(x=>x.n>L.s);if(nx)return {s:nx.n,e:1}}
+  return {s:L.s,e:L.e+1};
+}
+const running=()=>D.items.filter(x=>x.status==='Aktuell').sort((a,b)=>lastTs(b)-lastTs(a));
+function thumb(it,i){return `<div class="th"${it.poster?'':` data-p="${PAT[i%4]}"`} style="background-image:${it.poster?`url('${it.poster}')`:grad(gcols(it.title))}"></div>`}
+function badge(it,noteOnly){
+  const P=prog(it),n=inote(it);
+  if(!noteOnly&&it.status==='Aktuell'&&P.p!==null)return `<span class="sb run">${Math.round(P.p*100)}%</span>`;
+  if(n!==null)return `<span class="sb ${n>=9?'hi':n>=7?'mid':'lo'}">${r1(n)}</span>`;
+  return '<span class="sb no">–</span>';
+}
+function libRow(it,i,noteOnly){
+  return `<div class="ent" role="button" tabindex="0" onclick="openItem('${it.id}')" onkeydown="if(event.key==='Enter')this.click()">${thumb(it,i)}<div class="et"><b>${esc(it.title)}</b><small>${TY[it.type].n}${it.genre?' · '+esc(it.genre):''}${it.y?' · '+it.y:''}</small><small>${it.status}${it.status==='Geplant'&&it.prio?' · '+'★'.repeat(it.prio):''}</small></div>${badge(it,noteOnly)}</div>`;
+}
+
+/* ===== Diagramm ===== */
+function chartSVG(d,lb,lo,hi,cap){
+  const l=d.length-1,W=320,H=130,pl=18,pr=18,pt=26,pb=26;
+  if(hi<=lo)hi=lo+1;
+  const x=i=>d.length<2?W/2:pl+(W-pl-pr)*i/l,y=v=>pt+(H-pt-pb)*(1-(v-lo)/(hi-lo));
+  const pts=d.map((v,i)=>x(i)+','+y(v)).join(' '),st=Math.ceil(d.length/8);
+  return `<svg class="ch" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(cap)}">
+  <polygon points="${x(0)},${H-pb} ${pts} ${x(l)},${H-pb}" fill="rgba(255,255,255,.14)"/>
+  <line x1="${pl}" x2="${W-pr}" y1="${H-pb}" y2="${H-pb}" stroke="rgba(255,255,255,.3)"/>
+  <polyline points="${pts}" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+  ${d.map((v,i)=>`<circle cx="${x(i)}" cy="${y(v)}" r="${i===l?5.5:4}" style="fill:${i===l?'#fff':'rgba(14,28,20,.9)'}" stroke="#fff" stroke-width="2"/>`).join('')}
+  ${d.map((v,i)=>(i%st===0||i===l)?`<text class="cv" x="${x(i)}" y="${y(v)-10}" text-anchor="middle">${fmt(Math.round(v*10)/10)}</text>`:'').join('')}
+  ${lb.map((s,i)=>(i%st===0||i===l)?`<text class="cl" x="${x(i)}" y="${H-8}" text-anchor="middle">${esc(s)}</text>`:'').join('')}
+  </svg>`;
+}
+function weekHours(it){
+  const d=[],lb=[],today=sd(Date.now());
+  for(let i=6;i>=0;i--){const day=new Date(today.getFullYear(),today.getMonth(),today.getDate()-i);lb.push(WT[(day.getDay()+6)%7]);d.push(E.filter(e=>e.it===it&&e.dt.getTime()===day.getTime()).reduce((a,e)=>a+e.h,0))}
+  return {d,lb};
+}
+const rateRange=d=>[Math.max(0,Math.floor(Math.min(...d))-2),10];
+
+/* ===== Start: Hero und Läuft gerade ===== */
+let heroId=null;
+function anim(b){b.classList.remove('hin');void b.offsetWidth;b.classList.add('hin')}
+function hero(id){
+  const R=running();
+  if(id!==undefined)heroId=id;
+  const it=R.find(x=>x.id===heroId)||R[0]||null;
+  heroId=it?it.id:null;
+  const s=document.documentElement.style,b=$('#hb');
+  const cols=it?gcols(it.title):['#2F6B4F','#8DBFA2','#13271E'];
+  s.setProperty('--h1',cols[0]);s.setProperty('--h2',cols[1]);s.setProperty('--h3',cols[2]);
+  $('#hero').dataset.p=PAT[(it?TK.indexOf(it.type):0)%4];
+  $('#hp').style.backgroundImage=it&&it.poster?`url('${it.poster}')`:'none';
+  if(!it){
+    b.style.setProperty('--cat','#8DBFA2');
+    b.innerHTML=`<span class="chip"><i></i>Noch leer</span><h1>Was läuft gerade?</h1><p class="meta">Füge einen Titel hinzu und stelle ihn auf „Aktuell“.</p><div class="cta"><button class="go" onclick="openAdd()">Titel hinzufügen</button></div>`;
+    anim(b);return;
+  }
+  const P=prog(it),T=TY[it.type],L=E.filter(e=>e.it===it);
+  let meta='',goT='',fn='',cap='',ch='';
+  if(it.type==='serie'){
+    const nx=nextEp(it),last=L.find(e=>e.r.s);
+    meta=(last?'Zuletzt bewertet: '+last.lb:'Noch keine Folge bewertet')+(it.total?` · ${P.c} von ${it.total} Folgen`:'');
+    goT=`Weiter mit S${nx.s}E${nx.e}`;fn=`openRate('${it.id}',{s:${nx.s},e:${nx.e}})`;
+    if(last){const sn=last.r.s,pts=L.filter(e=>e.r.s===sn).sort((a,c)=>a.r.e-c.r.e),d=pts.map(e=>e.n),[lo,hi]=rateRange(d);
+      cap='Deine Bewertung je Folge, Staffel '+sn;ch=chartSVG(d,pts.map(e=>e.lb),lo,hi,cap)}
+  }else{
+    if(it.type==='buch'){meta=it.pages?`Seite ${it.page} von ${it.pages}`:'Läuft gerade';goT='Fortschritt eintragen';fn=`openPage('${it.id}')`}
+    else if(it.type==='spiel'){meta=`${r1(hoursOf(it))} Std. gespielt`+(it.pct?` · ${it.pct} %`:'')+(it.sub?' · '+esc(it.sub):'');goT='Sitzung eintragen';fn=`openRate('${it.id}')`}
+    else{meta='Läuft gerade';goT='Jetzt bewerten';fn=`openRate('${it.id}')`}
+    const wh=weekHours(it);
+    if(wh.d.some(v=>v>0)){cap='Stunden pro Tag, letzte 7 Tage';ch=chartSVG(wh.d,wh.lb,0,Math.max(...wh.d)*1.15,cap)}
+  }
+  const r=24,C=2*Math.PI*r;
+  b.style.setProperty('--cat',T.c);
+  b.innerHTML=`<span class="chip"><i></i>${T.n}</span><h1>${esc(it.title)}</h1><p class="meta">${meta}</p>
+  <div class="cta"><button class="go" onclick="${fn}">${goT}</button>${P.p!==null?`<div class="ring"><svg viewBox="0 0 58 58"><circle cx="29" cy="29" r="${r}" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="6"/><circle cx="29" cy="29" r="${r}" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-dasharray="${C*P.p} ${C}"/></svg><b>${Math.round(P.p*100)}%</b></div>`:''}</div>
+  ${cap?`<p class="cap">${cap}</p>`:''}${ch}`;
+  anim(b);
+  document.querySelectorAll('.pc[data-id]').forEach(e=>e.classList.toggle('on',e.dataset.id===heroId));
+}
+function strip(){
+  $('#strip').innerHTML=running().map((it,i)=>{
+    const P=prog(it),bg=it.poster?`linear-gradient(0deg,rgba(6,9,22,.74),rgba(6,9,22,.05) 62%),url('${it.poster}') center/cover`:grad(gcols(it.title));
+    return `<button class="pc${it.id===heroId?' on':''}" data-id="${it.id}"${it.poster?'':` data-p="${PAT[i%4]}"`} style="background:${bg};--cat:${TY[it.type].c}" onclick="hero('${it.id}')" aria-label="${esc(it.title)} anzeigen"><i></i><span>${esc(it.title)}</span>${P.p!==null?`<em style="width:${P.p*100}%"></em>`:''}</button>`;
+  }).join('')+`<button class="pc add" onclick="openAdd()" aria-label="Titel hinzufügen"><b>+</b><span>Hinzufügen</span></button>`;
+}
+
+/* ===== Historie ===== */
+let sel='all',more=false,zm='Medium',zr='all';
+function weeksBar(){
+  const WK=[...new Map(E.filter(e=>e.a<=56).map(e=>[e.k,e.w]))];
+  $('#weeks').innerHTML=`<button class="${sel==='all'?'on':''}" onclick="setW('all')">Alle</button>`+WK.map(([k,w])=>`<button class="${sel===k?'on':''}" onclick="setW(${k})">KW ${w}</button>`).join('');
+}
+function setW(k){sel=k;more=false;refresh()}
+function gentry(G,i){
+  const L=G.L,it=G.it,n=L.length,avg=L.reduce((a,e)=>a+e.n,0)/n,hrs=L.reduce((a,e)=>a+e.h,0),ser=it.type==='serie';
+  const labs=L.filter(e=>e.lb).slice().sort((a,b)=>ser?(a.r.s-b.r.s||a.r.e-b.r.e):a.r.ts-b.r.ts).map(e=>e.lb);
+  const et=labs.length?(labs.length<=3?labs.join(', '):labs.length+(ser?' Folgen':' Einträge')):(n>1?n+' Bewertungen':'');
+  const cls=avg>=9?'hi':avg>=7?'mid':'lo';
+  return `<div class="ent" role="button" tabindex="0" onclick="openItem('${it.id}')" onkeydown="if(event.key==='Enter')this.click()">${thumb(it,i)}<div class="et"><b>${esc(it.title)}</b><small>${TY[it.type].n} · ${esc(it.genre||'Sonstiges')}</small><small>${dl(L[0])}${et?' · '+esc(et):''}${hrs?' · '+r1(hrs)+' Std.':''}</small></div><span class="sb ${cls}" aria-label="${n>1?'Durchschnittsnote':'Note'} ${r1(avg)}">${r1(avg)}</span></div>`;
+}
+const dm=d=>d.toLocaleDateString('de-DE',{day:'numeric',month:'short'});
+function log(){
+  if(!E.length){$('#log').innerHTML='<div class="wk empty">Noch nichts bewertet. Tippe oben auf „+“, füge einen Titel hinzu und gib deine erste Bewertung ab.</div>';return}
+  const ks=[...new Set(E.map(e=>e.k))];
+  const show=sel==='all'?(more?ks:ks.slice(0,3)):[sel];
+  $('#log').innerHTML=show.map(k=>{
+    const L=E.filter(e=>e.k===k),avg=L.reduce((a,e)=>a+e.n,0)/L.length,hrs=L.reduce((a,e)=>a+e.h,0);
+    const m=new Map();L.forEach(e=>{if(!m.has(e.it.id))m.set(e.it.id,{it:e.it,L:[]});m.get(e.it.id).L.push(e)});
+    const G=[...m.values()],d0=L[0].dt,mon=new Date(d0.getFullYear(),d0.getMonth(),d0.getDate()-((d0.getDay()+6)%7)),sun=new Date(mon.getFullYear(),mon.getMonth(),mon.getDate()+6);
+    return `<section class="wk rv"><div class="wkh"><div><b>KW ${L[0].w}</b>${k===wkOf(sd(Date.now())).k?'<i class="now">aktuell</i>':''}<span>${dm(mon)} – ${dm(sun)}</span></div><em>${G.length} Titel · ${L.length} ${L.length===1?'Bewertung':'Bewertungen'}<br>Ø ${r1(avg)}${hrs?' · '+r1(hrs)+' Std.':''}</em></div>${G.map((g,i)=>gentry(g,i)).join('')}</section>`;
+  }).join('')+(sel==='all'&&!more&&ks.length>3?`<button class="more" onclick="more=true;refresh()">Ältere Wochen anzeigen</button>`:'');
+}
+
+/* ===== Übersicht ===== */
+const ZT={7:'in den letzten 7 Tagen',30:'in den letzten 30 Tagen',365:'in den letzten 365 Tagen',all:'insgesamt'},ZL={7:'Woche',30:'Monat',365:'Jahr',all:'Gesamt'};
+function setZ(z){zr=z;time()}
+function fill(c){c.querySelectorAll('[data-w]').forEach(e=>e.style.width=e.dataset.w);c.querySelectorAll('[data-h]').forEach(e=>e.style.height=e.dataset.h)}
+function fillSoon(){requestAnimationFrame(()=>requestAnimationFrame(()=>document.querySelectorAll('.card.vis').forEach(fill)))}
+function time(){
+  fillSoon();
+  $('#rng').innerHTML=['7','30','365','all'].map(z=>`<button class="${zr===z?'on':''}" onclick="setZ('${z}')">${ZL[z]}</button>`).join('');
+  $('#ts').textContent='Stunden '+ZT[zr];
+  $('#seg').innerHTML=['Medium','Genre'].map(k=>`<button class="${k===zm?'on':''}" onclick="zm='${k}';time()">Nach ${k}</button>`).join('');
+  const g={},med=zm==='Medium';
+  E.filter(e=>zr==='all'||e.a<+zr).forEach(e=>{const key=med?TY[e.c].p:e.g;(g[key]=g[key]||{v:0,c:med?TY[e.c].c:gcol(e.g)}).v+=e.h});
+  const d=Object.entries(g).filter(x=>x[1].v>0).sort((a,b)=>b[1].v-a[1].v),tot=d.reduce((a,x)=>a+x[1].v,0),mx=d.length?d[0][1].v:1;
+  if(!d.length){$('#stack').innerHTML='';$('#bars').innerHTML='<p class="sub">Keine Stunden in diesem Zeitraum. Trage bei einer Bewertung die Dauer ein.</p>';return}
+  $('#stack').innerHTML=d.map(([k,x])=>`<i data-w="${x.v/tot*100}%" style="background:${x.c}"></i>`).join('');
+  $('#bars').innerHTML=d.map(([k,x])=>`<div class="hb"><span>${esc(k)}</span><u><i data-w="${x.v/mx*100}%" style="background:${x.c}"></i></u><span>${r1(x.v)} Std.</span></div>`).join('')+`<p class="sub" style="margin:12px 0 0">Zusammen ${r1(tot)} Stunden</p>`;
+}
+function overview(){
+  const S=E.filter(e=>sel==='all'||e.k===sel),w=sel==='all'||!S.length?null:S[0].w;
+  $('#on').textContent='Kacheln und Notenverteilung: '+(w?'KW '+w:'alle Zeiträume')+' (Auswahl der Historie)';
+  let t;
+  if(S.length){
+    const avg=S.reduce((a,e)=>a+e.n,0)/S.length,gh={};
+    S.forEach(e=>gh[e.g]=(gh[e.g]||0)+(e.h||.01));
+    t=[[r1(avg),'Durchschnitts&shy;note'],[S.length,'Bewertungen'],[esc(Object.entries(gh).sort((a,b)=>b[1]-a[1])[0][0]),'Lieblingsgenre']];
+  }else t=[['–','Durchschnitts&shy;note'],['0','Bewertungen'],['–','Lieblingsgenre']];
+  $('#tiles').innerHTML=t.map(x=>`<div class="tile rv"><b>${x[0]}</b><small>${x[1]}</small></div>`).join('');
+  const HS=[1,2,3,4,5,6,7,8,9,10].map(n=>S.filter(e=>e.n===n).length),hm=Math.max(...HS,1);
+  $('#hist').innerHTML=HS.map((n,i)=>`<div><span>${n||''}</span><i data-h="${n?Math.max(n/hm*72,6):2}px" style="opacity:${n?1:.3}"></i><span>${i+1}</span></div>`).join('');
+  time();
+}
+
+/* ===== Bibliothek ===== */
+let view='home',lib={type:'serie',st:'Alle',sort:'Zuletzt',grid:false};
+function goView(v){
+  if(v==='home')view='home';else{view='lib';lib.type=v;lib.st='Alle'}
+  $('#vh').hidden=view!=='home';$('#vl').hidden=view!=='lib';
+  document.body.classList.toggle('lib',view==='lib');
+  navSet();if(view==='lib')libRender();else hero();
+  scrollTo(0,0);refreshRV();
+}
+function libRender(){
+  const T=TY[lib.type];
+  let L=D.items.filter(x=>x.type===lib.type);const cnt=L.length;
+  if(lib.st!=='Alle')L=L.filter(x=>x.status===lib.st);
+  const key={Zuletzt:(a,b)=>lastTs(b)-lastTs(a),Note:(a,b)=>(inote(b)??-1)-(inote(a)??-1),Titel:(a,b)=>a.title.localeCompare(b.title,'de'),Jahr:(a,b)=>(b.y||0)-(a.y||0)}[lib.sort];
+  L.sort(key);
+  const body=!L.length?`<div class="empty">${cnt?'Nichts in dieser Auswahl.':`Noch keine ${T.p}. Tippe auf „+“ und füge den ersten Titel hinzu.`}</div>`
+    :lib.grid?`<div class="gg">${L.map((it,i)=>`<button class="gc" onclick="openItem('${it.id}')" style="background-image:${it.poster?`linear-gradient(0deg,rgba(6,9,22,.7),rgba(6,9,22,0) 55%),url('${it.poster}')`:grad(gcols(it.title))}" aria-label="${esc(it.title)}"><span>${esc(it.title)}</span>${badge(it)}</button>`).join('')}</div>`
+    :`<section class="wk rv">${L.map(libRow).join('')}</section>`;
+  $('#vl').innerHTML=`<div class="lh"><div><h1>${T.p}</h1><p class="sub">${cnt} ${cnt===1?'Titel':'Titel'}</p></div><div class="lb"><button class="ib d" aria-label="Suchen" onclick="openSearch('${lib.type}')">${ICS}</button><button class="ib d" aria-label="Hinzufügen" onclick="openAdd('${lib.type}')">+</button><button class="ib d" aria-label="Menü" onclick="openMenu()">⋯</button></div></div>
+  <div class="weeks">${['Alle',...STS].map(s=>`<button class="${lib.st===s?'on':''}" onclick="lib.st='${s}';libRender();refreshRV()">${s}</button>`).join('')}</div>
+  <div class="weeks srt"><span class="lbl">Sortieren</span>${['Zuletzt','Note','Titel','Jahr'].map(s=>`<button class="${lib.sort===s?'on':''}" onclick="lib.sort='${s}';libRender();refreshRV()">${s}</button>`).join('')}<button class="${lib.grid?'on':''}" onclick="lib.grid=!lib.grid;libRender();refreshRV()" aria-label="Darstellung wechseln">${lib.grid?'Liste':'Postergitter'}</button></div>${body}`;
+}
+const IC={
+  home:'<path d="M3.5 11 12 3.5 20.5 11v8.5a1 1 0 0 1-1 1H15v-6H9v6H4.5a1 1 0 0 1-1-1z"/>',
+  film:'<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/>',
+  serie:'<rect x="3" y="5" width="18" height="12" rx="2.5"/><path d="M8 21h8M12 17v4"/>',
+  buch:'<path d="M5.5 4.5h11A2.5 2.5 0 0 1 19 7v13H8a2.5 2.5 0 0 1-2.5-2.5z"/><path d="M5.5 17.5A2.5 2.5 0 0 1 8 15h11"/>',
+  spiel:'<rect x="2.5" y="7" width="19" height="11" rx="5.5"/><path d="M8 10.5v4M6 12.5h4"/><circle cx="16" cy="11.5" r=".6"/><circle cx="18" cy="14" r=".6"/>'
+};
+const NAVS=[['home','Start','#8DBFA2'],['film','Filme',TY.film.c],['serie','Serien',TY.serie.c],['buch','Bücher',TY.buch.c],['spiel','Spiele',TY.spiel.c]];
+function navSet(){
+  $('#nav').innerHTML=NAVS.map(n=>`<button class="${(view==='home'?'home':lib.type)===n[0]?'on':''}" style="--cat:${n[2]}" onclick="goView('${n[0]}')"><span class="ni"><svg viewBox="0 0 24 24" aria-hidden="true">${IC[n[0]]}</svg></span>${n[1]}</button>`).join('');
+}
+
+/* ===== Sheets allgemein ===== */
+const isOpen=id=>{const e=document.getElementById(id);return !!(e&&e.open)};
+function bd(e){if(e.target===e.currentTarget)e.currentTarget.close()}
+function closeS(id){const e=document.getElementById(id);if(e&&e.open)e.close()}
+function mkSheet(id,title,tall){
+  const d=document.createElement('dialog');d.id=id;d.className='sheet'+(tall?' tall':'');d.setAttribute('onclick','bd(event)');
+  d.innerHTML=`<div class="grab" tabindex="-1"></div><div class="mh"><h3 id="${id}-t">${title}</h3><button class="x" aria-label="Schließen" onclick="closeS('${id}')">✕</button></div><div class="sbody" id="${id}-b"></div>`;
+  document.body.appendChild(d);
+}
+[['ad','Hinzufügen',1],['dt','Details',1],['rt','Bewertung',1],['pg','Fortschritt',0],['st','Statistik',1],['wl','Merkliste',1],['se','Einstellungen',1]].forEach(a=>mkSheet(a[0],a[1],a[2]));
+function openSheet(id){closeS('menu');if(id==='st')statRender();if(id==='wl')wishRender();if(id==='se')setRender();$('#'+id).showModal()}
+function lbText(){if(!D.lb)return D.items.length?'Noch kein Backup gemacht':'Keys, Darstellung, Sicherung';const d=Math.floor((Date.now()-D.lb)/DAY);return 'Letztes Backup: '+(d<1?'heute':d===1?'gestern':'vor '+d+' Tagen')}
+function openMenu(){$('#bkinfo').textContent=lbText();$('#menu').showModal()}
+let tt;function toast(m){const e=$('#toast');e.textContent=m;e.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>e.classList.remove('on'),2600)}
+
+/* ===== Suche ===== */
+let sm='Alle';
+function openSearch(t){sm=t&&TY[t]?t:'Alle';$('#sd').showModal();search();setTimeout(()=>$('#sq').focus(),60)}
+function qs(t){$('#sq').value=t;search();$('#sq').focus()}
+function search(){
+  const toks=$('#sq').value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  $('#sm').innerHTML=['Alle',...TK].map(k=>`<button class="${sm===k?'on':''}" onclick="sm='${k}';search()">${k==='Alle'?'Alle':TY[k].p}</button>`).join('');
+  const box=$('#sres');
+  if(!D.items.length){box.innerHTML='<p class="sub">Du hast noch nichts im Log. Füge zuerst einen Titel hinzu.</p><button class="btn pri" onclick="closeS(\'sd\');openAdd()">Titel hinzufügen</button>';return}
+  if(!toks.length&&sm==='Alle'){
+    const gs=Object.entries(D.items.reduce((a,x)=>{if(x.genre)a[x.genre]=(a[x.genre]||0)+1;return a},{})).sort((a,b)=>b[1]-a[1]).slice(0,3).map(x=>x[0]);
+    box.innerHTML=`<p class="sub">Durchsucht alles, was du im Log hast: Titel, Medium, Genre, Status, Jahr, Folge und KW.</p><div class="sug">${[...gs,'Aktuell','Geplant','Fertig'].map(t=>`<button data-q="${esc(t)}" onclick="qs(this.dataset.q)">${esc(t)}</button>`).join('')}</div>`;return;
+  }
+  const R=D.items.filter(it=>{
+    if(sm!=='Alle'&&it.type!==sm)return false;
+    const L=E.filter(e=>e.it===it);
+    const hay=[it.title,TY[it.type].n,TY[it.type].p,it.genre,it.sub,it.status,String(it.y),...(L.length?['kw']:[]),...L.map(e=>e.lb)].join(' ').toLowerCase();
+    return toks.every(t=>/^\d+$/.test(t)?(String(it.y)===t||L.some(e=>e.n===+t||e.w===+t)):hay.includes(t));
+  }).sort((a,b)=>lastTs(b)-lastTs(a));
+  const n=R.length;
+  box.innerHTML=n?`<p class="sub">${n} Treffer${n>60?', angezeigt werden die ersten 60':''}</p><div class="sr">${R.slice(0,60).map(libRow).join('')}</div>`:'<p class="sub">Nichts gefunden. Versuch es mit einem Titel, Genre oder einer KW.</p>';
+}
+
+/* ===== Online-Datenbanken ===== */
+async function jget(url,opt){const r=await fetch(url,opt);if(!r.ok)throw new Error(String(r.status));return r.json()}
+function tm(path,params){
+  const k=D.cfg.tmdb,q=new URLSearchParams(Object.assign({language:'de-DE'},params||{})),o={};
+  if(k.length>40)o.headers={Authorization:'Bearer '+k};else q.set('api_key',k);
+  return jget('https://api.themoviedb.org/3'+path+'?'+q,o);
+}
+const needKey=t=>(t==='film'||t==='serie')?!D.cfg.tmdb:t==='spiel'?!D.cfg.rawg:false;
+async function apiSearch(t,q){
+  if(t==='film'||t==='serie'){
+    const d=await tm('/search/'+(t==='film'?'movie':'tv'),{query:q});
+    return (d.results||[]).slice(0,8).map(r=>({title:r.title||r.name||'',year:+(r.release_date||r.first_air_date||'').slice(0,4)||'',poster:r.poster_path?'https://image.tmdb.org/t/p/w342'+r.poster_path:'',tmdb:r.id,genre:GEN[(r.genre_ids||[])[0]]||'',ov:r.overview||'',tmv:r.vote_average?r1(r.vote_average):''}));
+  }
+  if(t==='buch'){
+    const d=await jget('https://openlibrary.org/search.json?'+new URLSearchParams({q,limit:'8',fields:'key,title,author_name,first_publish_year,cover_i,number_of_pages_median'}));
+    return (d.docs||[]).map(x=>({title:x.title||'',year:x.first_publish_year||'',poster:x.cover_i?`https://covers.openlibrary.org/b/id/${x.cover_i}-M.jpg`:'',sub:(x.author_name||[])[0]||'',pages:x.number_of_pages_median||0}));
+  }
+  const d=await jget('https://api.rawg.io/api/games?'+new URLSearchParams({key:D.cfg.rawg,search:q,page_size:'8'}));
+  return (d.results||[]).map(x=>{const g=(x.genres||[])[0];return {title:x.name||'',year:+(x.released||'').slice(0,4)||'',poster:x.background_image?x.background_image.replace('/media/games/','/media/crop/600/400/games/'):'',genre:g?(RG[g.name]||g.name):'',sub:(x.platforms||[]).slice(0,3).map(p=>p.platform.name).join(', '),mc:x.metacritic?String(x.metacritic):''}});
+}
+async function omdb(F){
+  const d=await jget('https://www.omdbapi.com/?'+new URLSearchParams({i:F.imdb,apikey:D.cfg.omdb}));
+  if(d.Response!=='True')return;
+  (d.Ratings||[]).forEach(x=>{const v=String(x.Value||'');
+    if(x.Source==='Internet Movie Database')F.sc.imdb=v.replace('/10','').replace('.',',');
+    else if(x.Source==='Rotten Tomatoes')F.sc.rt=v;
+    else if(x.Source==='Metacritic')F.sc.mc=v.replace('/100','')});
+}
+async function enrich(F,r){
+  if((F.type==='film'||F.type==='serie')&&D.cfg.tmdb&&r.tmdb){
+    const d=await tm(`/${F.type==='film'?'movie':'tv'}/${r.tmdb}`,{append_to_response:'external_ids'});
+    F.tmdb=r.tmdb;F.imdb=(d.external_ids&&d.external_ids.imdb_id)||d.imdb_id||'';
+    if(d.genres&&d.genres[0])F.genre=ng(d.genres[0].name);
+    if(F.type==='film')F.runtime=d.runtime||0;
+    else{F.epMin=(d.episode_run_time&&d.episode_run_time[0])||(d.last_episode_to_air&&d.last_episode_to_air.runtime)||0;F.total=d.number_of_episodes||0;F.seasons=(d.seasons||[]).filter(s=>s.season_number>0).map(s=>({n:s.season_number,c:s.episode_count||0}))}
+    if(r.tmv)F.sc.tm=r.tmv;
+    if(F.imdb&&D.cfg.omdb){try{await omdb(F)}catch(e){}}
+  }
+  if(F.type==='spiel'&&r.mc)F.sc.mc=r.mc;
+}
+const PROV={};let detId=null;
+async function loadProv(it){
+  if(!(it.type==='film'||it.type==='serie')||!it.tmdb||!D.cfg.tmdb)return;
+  try{
+    let v=PROV[it.id];
+    if(!v){const d=await tm(`/${it.type==='film'?'movie':'tv'}/${it.tmdb}/watch/providers`);v=((d.results||{}).DE||{}).flatrate||[];v=v.map(p=>p.provider_name);PROV[it.id]=v}
+    const el=$('#prov');if(el&&detId===it.id)el.innerHTML=(v.length?'Streaming in Deutschland: '+v.map(esc).join(', '):'Kein Streaming-Abo in Deutschland gefunden.')+'<br><small>Daten: JustWatch über TMDB</small>';
+  }catch(e){}
+}
+async function loadScores(id){
+  const it=item(id);if(!it||!it.imdb||!D.cfg.omdb)return;
+  try{await omdb(it);persist();refresh();toast('Scores geladen')}catch(e){toast('Scores konnten nicht geladen werden')}
+}
+
+/* ===== Hinzufügen und Bearbeiten ===== */
+let AD={type:'serie',tk:0,res:[],F:null,edit:false},adT=0;
+function openAdd(type){
+  AD={type:type&&TY[type]?type:(view==='lib'?lib.type:AD.type),tk:0,res:[],F:null,edit:false};
+  closeS('menu');adRender();$('#ad').showModal();
+}
+function setAT(){$('#ad-t').textContent=AD.F?(AD.edit?'Bearbeiten':'Neuer Eintrag'):'Hinzufügen'}
+function adRender(){
+  setAT();
+  const b=$('#ad-b');
+  if(AD.F){formRender();return}
+  b.innerHTML=`<div class="cr">${TK.map(k=>`<button class="${AD.type===k?'on':''}" onclick="AD.type='${k}';AD.res=[];adRender()">${TY[k].p}</button>`).join('')}</div>
+  <label class="sf"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input id="adq" type="search" placeholder="${TY[AD.type].n} suchen" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-label="Titel suchen" oninput="adq()" onkeydown="if(event.key==='Enter')doSearch()"></label>
+  <div id="adr"></div>
+  <button class="btn" onclick="manual()">Manuell hinzufügen</button>`;
+  adHint();
+}
+function adHint(){
+  const t=AD.type;
+  $('#adr').innerHTML=needKey(t)
+    ?`<p class="sub">Für Poster und Daten brauchst du einen kostenlosen ${t==='spiel'?'RAWG':'TMDB'}-Key. Trage ihn unter Mehr, Einstellungen ein. Du kannst auch direkt manuell hinzufügen.</p><button class="btn" onclick="closeS('ad');openSheet('se')" style="margin-bottom:12px">Einstellungen öffnen</button>`
+    :'<p class="sub">Tippe einen Titel ein. Treffer erscheinen mit Poster.</p>';
+}
+function adq(){clearTimeout(adT);adT=setTimeout(doSearch,450)}
+async function doSearch(){
+  clearTimeout(adT);
+  const q=$('#adq').value.trim(),box=$('#adr');
+  if(needKey(AD.type)){adHint();return}
+  if(q.length<2){adHint();return}
+  const tk=++AD.tk;box.innerHTML='<p class="sub">Suche läuft …</p>';
+  try{
+    const res=await apiSearch(AD.type,q);
+    if(tk!==AD.tk||AD.F)return;
+    AD.res=res;
+    box.innerHTML=res.length?`<div class="sr" style="margin-bottom:12px">${res.map((r,i)=>`<button class="res" onclick="pickRes(${i})"><div class="th"${r.poster?'':' data-p="grid"'} style="background-image:${safeImg(r.poster)?`url('${safeImg(r.poster)}')`:grad(gcols(r.title))}"></div><div><b>${esc(r.title)}</b><small>${[r.year,esc(r.genre||r.sub||'')].filter(Boolean).join(' · ')}</small></div></button>`).join('')}</div>`:'<p class="sub">Keine Treffer. Probiere einen anderen Titel oder füge manuell hinzu.</p>';
+  }catch(e){
+    if(tk!==AD.tk)return;
+    const s=e&&e.message;
+    box.innerHTML=`<p class="err">${s==='401'||s==='403'?'Der Key wurde nicht akzeptiert. Prüfe ihn in den Einstellungen.':'Die Suche ist fehlgeschlagen. Prüfe deine Verbindung oder füge manuell hinzu.'}</p>`;
+  }
+}
+function newF(type,r){
+  return {id:'',type,title:r.title||'',y:r.year||'',genre:r.genre||'',poster:safeImg(r.poster),status:type==='film'?'Geplant':'Aktuell',prio:0,note:'',created:0,ov:(r.ov||'').slice(0,600),sub:r.sub||'',tmdb:0,imdb:'',runtime:0,epMin:0,total:0,pages:r.pages||0,page:0,pct:0,seasons:[],sc:{}};
+}
+async function pickRes(i){
+  const r=AD.res[i];if(!r)return;
+  $('#adr').innerHTML='<p class="sub">Lade Details …</p>';
+  const F=newF(AD.type,r);
+  try{await enrich(F,r)}catch(e){}
+  AD.F=F;AD.edit=false;adRender();
+}
+function manual(){const q=($('#adq')||{}).value||'';AD.F=newF(AD.type,{title:q.trim()});AD.edit=false;adRender()}
+function openEdit(id){const it=item(id);if(!it)return;AD={type:it.type,tk:0,res:[],F:JSON.parse(JSON.stringify(it)),edit:true};adRender();$('#ad').showModal()}
+function ff(k,v){AD.F[k]=v}
+function ffr(k,v){AD.F[k]=v;formRender()}
+function formRender(){
+  const F=AD.F,t=F.type,b=$('#ad-b'),y=b.scrollTop;
+  const gs=[...new Set([...D.items.map(x=>x.genre).filter(Boolean),...BASEG])].slice(0,14);
+  let h='';
+  if(F.poster)h+=`<div class="res" style="margin-bottom:8px"><div class="th" style="background-image:url('${F.poster}')"></div><div><b>${esc(F.title||'Neuer Eintrag')}</b><small>${TY[t].n}</small></div></div>`;
+  h+=`<label class="fl"><span>Titel</span><input class="in" value="${esc(F.title)}" maxlength="200" oninput="ff('title',this.value)"></label>
+  <div class="two"><label class="fl"><span>Jahr</span><input class="in" inputmode="numeric" value="${esc(F.y)}" maxlength="4" oninput="ff('y',this.value)"></label>
+  <label class="fl"><span>Genre</span><input class="in" value="${esc(F.genre)}" maxlength="40" oninput="ff('genre',this.value)"></label></div>
+  <div class="cr">${gs.map((g,i)=>`<button data-g="${esc(g)}" class="${F.genre===g?'on':''}" onclick="ffr('genre',this.dataset.g)">${esc(g)}</button>`).join('')}</div>
+  <div class="sec" style="margin-top:4px">Status</div><div class="cr">${STS.map(s=>`<button class="${F.status===s?'on':''}" onclick="ffr('status','${s}')">${s}</button>`).join('')}</div>`;
+  if(F.status==='Geplant')h+=`<div class="sec" style="margin-top:4px">Priorität</div><div class="cr">${[1,2,3].map(k=>`<button class="${F.prio===k?'on':''}" onclick="ffr('prio',${F.prio===k?0:k})">${'★'.repeat(k)}</button>`).join('')}</div>`;
+  if(t==='film')h+=`<label class="fl"><span>Laufzeit (Minuten)</span><input class="in" inputmode="numeric" value="${F.runtime||''}" oninput="ff('runtime',this.value)"></label>`;
+  if(t==='serie')h+=`<div class="two"><label class="fl"><span>Minuten je Folge</span><input class="in" inputmode="numeric" value="${F.epMin||''}" oninput="ff('epMin',this.value)"></label><label class="fl"><span>Folgen gesamt</span><input class="in" inputmode="numeric" value="${F.total||''}" oninput="ff('total',this.value)"></label></div>${F.seasons.length?`<p class="warn">${F.seasons.length} Staffeln mit Folgenzahlen sind übernommen.</p>`:''}`;
+  if(t==='buch')h+=`<label class="fl"><span>Autor</span><input class="in" value="${esc(F.sub)}" maxlength="80" oninput="ff('sub',this.value)"></label><div class="two"><label class="fl"><span>Seiten gesamt</span><input class="in" inputmode="numeric" value="${F.pages||''}" oninput="ff('pages',this.value)"></label><label class="fl"><span>Gelesen bis Seite</span><input class="in" inputmode="numeric" value="${F.page||''}" oninput="ff('page',this.value)"></label></div>`;
+  if(t==='spiel')h+=`<label class="fl"><span>Plattform</span><input class="in" value="${esc(F.sub)}" maxlength="80" oninput="ff('sub',this.value)"></label>`;
+  h+=`<div class="sticky"><button class="btn pri" onclick="saveForm()">${AD.edit?'Speichern':'Hinzufügen'}</button>${AD.edit?'':'<button class="btn" onclick="AD.F=null;adRender()">Zurück zur Suche</button>'}</div>`;
+  b.innerHTML=h;b.scrollTop=y;
+}
+function saveForm(){
+  const F=AD.F;
+  if(!String(F.title).trim()){toast('Bitte einen Titel eingeben');return}
+  const raw=Object.assign({},F,{id:F.id||uid(),created:F.created||Date.now()});
+  const it=sane({items:[raw],R:[]}).items[0];
+  if(!it){toast('Eintrag konnte nicht gespeichert werden');return}
+  if(AD.edit){const i=D.items.findIndex(x=>x.id===it.id);if(i>=0)D.items[i]=it}else D.items.push(it);
+  persist();closeS('ad');refresh();
+  if(!AD.edit){toast('Hinzugefügt');openItem(it.id)}
+}
+
+/* ===== Bewertung abgeben ===== */
+let RS=null;
+const todayStr=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
+function dateTs(s){const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(s||'');if(!m)return Date.now();const t=new Date(+m[1],+m[2]-1,+m[3],12).getTime();return Math.min(t,Date.now())}
+function openRate(id,pre){
+  const it=item(id);if(!it)return;pre=pre||{};
+  const nx=it.type==='serie'?nextEp(it):{s:0,e:0},first=!D.R.some(r=>r.i===id);
+  RS={id,n:0,s:pre.s||nx.s,e:pre.e||nx.e,lb:'',date:todayStr(),note:'',fin:false,
+    h:it.type==='film'?(it.runtime?r1(it.runtime/60):''):it.type==='serie'?(it.epMin?r1(it.epMin/60):''):(it.type==='buch'&&first&&it.pages?r1(it.pages*2/60):'')};
+  $('#rt-t').textContent=it.type==='serie'?'Folge bewerten':'Bewerten';
+  rateRender();$('#rt').showModal();
+}
+function rs(k,v){RS[k]=v;if(k==='s'){RS.e=1}rateRender()}
+function rateRender(){
+  const it=item(RS.id),b=$('#rt-b'),y=b.scrollTop,ser=it.type==='serie';
+  let h=`<p class="ft">${esc(it.title)}</p>`;
+  if(ser){
+    const ss=it.seasons||[],rated=new Set(D.R.filter(r=>r.i===it.id&&r.s===RS.s).map(r=>r.e));
+    if(ss.length){
+      const cur=ss.find(x=>x.n===RS.s);
+      h+=`<div class="sec" style="margin-top:0">Staffel</div><div class="cr">${ss.map(x=>`<button class="${RS.s===x.n?'on':''}" onclick="rs('s',${x.n})">${x.n}</button>`).join('')}</div>`;
+      h+=`<div class="sec" style="margin-top:0">Folge</div><div class="cr epg">${Array.from({length:Math.max(cur?cur.c:0,RS.e)},(_,i)=>i+1).map(e=>`<button class="${RS.e===e?'on':rated.has(e)?'done':''}" onclick="rs('e',${e})">${e}</button>`).join('')}</div>`;
+    }else{
+      h+=`<div class="two"><label class="fl"><span>Staffel</span><input class="in" inputmode="numeric" value="${RS.s||''}" oninput="RS.s=parseInt(this.value)||0"></label><label class="fl"><span>Folge</span><input class="in" inputmode="numeric" value="${RS.e||''}" oninput="RS.e=parseInt(this.value)||0"></label></div>`;
+    }
+    if(rated.has(RS.e))h+='<p class="warn">Diese Folge ist schon bewertet. Die neue Bewertung ersetzt die alte.</p>';
+  }else{
+    h+=`<label class="fl"><span>${it.type==='buch'?'Teil oder Kapitel (optional)':it.type==='spiel'?'Kapitel oder Sitzung (optional)':'Zusatz (optional), z. B. Wiederholung'}</span><input class="in" maxlength="40" value="${esc(RS.lb)}" oninput="RS.lb=this.value"></label>`;
+  }
+  h+=`<div class="sec" style="margin-top:0">Note</div><div class="rg">${[1,2,3,4,5,6,7,8,9,10].map(n=>`<button class="${RS.n===n?'on':''}" onclick="RS.n=${n};rateRender()">${n}</button>`).join('')}</div>
+  <div class="two"><label class="fl"><span>Dauer (Std.)</span><input class="in" inputmode="decimal" value="${esc(RS.h)}" oninput="RS.h=this.value" placeholder="z. B. 1,5"></label>
+  <label class="fl"><span>Datum</span><input class="in" type="date" value="${RS.date}" max="${todayStr()}" onchange="RS.date=this.value"></label></div>
+  <label class="fl"><span>Notiz (optional)</span><textarea class="in" maxlength="500" oninput="RS.note=this.value">${esc(RS.note)}</textarea></label>`;
+  if(it.type==='buch'||it.type==='spiel')h+=`<div class="cr"><button class="${RS.fin?'on':''}" onclick="RS.fin=!RS.fin;rateRender()">${it.type==='buch'?'Fertig gelesen':'Durchgespielt'}</button></div>`;
+  h+=`<div class="sticky"><button class="btn pri" onclick="saveRate()">Speichern</button></div>`;
+  b.innerHTML=h;b.scrollTop=y;
+}
+function saveRate(){
+  const it=item(RS.id);if(!it)return;
+  if(!RS.n){toast('Bitte eine Note wählen');return}
+  const ev={id:uid(),i:it.id,ts:dateTs(RS.date),n:RS.n,h:Math.max(0,Math.min(2000,num(RS.h))),lb:'',s:0,e:0,note:RS.note.slice(0,500)};
+  if(it.type==='serie'){
+    if(!(RS.s>0&&RS.e>0)){toast('Bitte Staffel und Folge angeben');return}
+    ev.s=RS.s;ev.e=RS.e;ev.lb=`S${RS.s}E${RS.e}`;
+    D.R=D.R.filter(r=>!(r.i===it.id&&r.s===ev.s&&r.e===ev.e));
+  }else ev.lb=RS.lb.trim().slice(0,40);
+  D.R.push(ev);
+  if(it.status==='Geplant')it.status=it.type==='film'?'Fertig':'Aktuell';
+  if(RS.fin){it.status='Fertig';if(it.type==='buch'&&it.pages)it.page=it.pages;if(it.type==='spiel')it.pct=100}
+  persist();closeS('rt');refresh();toast('Bewertung gespeichert');
+}
+/* Fortschritt Buch */
+let PG=null;
+function openPage(id){
+  const it=item(id);if(!it)return;
+  PG={id,v:it.page||0};$('#pg-t').textContent='Fortschritt';pgRender();$('#pg').showModal();
+}
+function pgRender(){
+  const it=item(PG.id);
+  $('#pg-b').innerHTML=`<p class="ft">${esc(it.title)}</p><label class="fl"><span>Gelesen bis Seite${it.pages?' (von '+it.pages+')':''}</span><input class="in" inputmode="numeric" value="${PG.v||''}" oninput="PG.v=parseInt(this.value)||0"></label>
+  <div class="cr">${[10,25,50].map(n=>`<button onclick="PG.v=(parseInt(PG.v)||0)+${n};pgRender()">+${n}</button>`).join('')}</div>
+  <button class="btn pri" onclick="savePg()">Speichern</button>`;
+}
+function savePg(){
+  const it=item(PG.id);if(!it)return;
+  let v=Math.max(0,Math.min(20000,parseInt(PG.v)||0));
+  if(it.pages)v=Math.min(v,it.pages);
+  it.page=v;
+  if(it.status==='Geplant')it.status='Aktuell';
+  const done=it.pages&&v>=it.pages;
+  if(done)it.status='Fertig';
+  persist();closeS('pg');refresh();
+  if(done){toast('Fertig gelesen. Wie war das Buch?');openRate(it.id,{fin:true})}else toast('Fortschritt gespeichert');
+}
+
+/* ===== Detailansicht ===== */
+function openItem(id){if(!item(id))return;detId=id;detRender();if(!isOpen('dt'))$('#dt').showModal()}
+function detRender(){
+  const it=item(detId);if(!it){closeS('dt');return}
+  $('#dt-t').textContent=TY[it.type].n;
+  const b=$('#dt-b'),y=b.scrollTop;b.innerHTML=detHTML(it);b.scrollTop=y;loadProv(it);
+}
+function detHTML(it){
+  const T=TY[it.type],L=E.filter(e=>e.it===it),n=inote(it),c=gcols(it.title),P=prog(it),id=it.id;
+  let h=`<div class="dh" style="background:linear-gradient(160deg,${c[0]},${c[2]})">${it.poster?`<img class="dpi" src="${it.poster}" alt="" referrerpolicy="no-referrer">`:''}<div class="di"><span class="chip" style="background:rgba(255,255,255,.2)"><i style="background:${T.c};width:9px;height:9px;border-radius:50%"></i>${T.n}</span><h2>${esc(it.title)}</h2><p>${[it.y,esc(it.genre),esc(it.sub)].filter(Boolean).join(' · ')}</p></div></div>`;
+  h+=`<div class="cr">${STS.map(s=>`<button class="${it.status===s?'on':''}" onclick="setStatus('${id}','${s}')">${s}</button>`).join('')}</div>`;
+  if(it.status==='Geplant')h+=`<div class="cr"><button disabled style="border:0;background:none">Priorität</button>${[1,2,3].map(k=>`<button class="${it.prio===k?'on':''}" onclick="setPrio('${id}',${it.prio===k?0:k})">${'★'.repeat(k)}</button>`).join('')}</div>`;
+  const sc=[['me',n===null?'–':r1(n),'Deine Note']];
+  if(it.sc.imdb)sc.push(['',it.sc.imdb,'IMDb']);if(it.sc.rt)sc.push(['',it.sc.rt,'Rotten Tomatoes']);if(it.sc.mc)sc.push(['',it.sc.mc,'Metacritic']);if(it.sc.tm)sc.push(['',it.sc.tm,'TMDB']);
+  h+=`<div class="scs">${sc.map(s=>`<div class="s3 ${s[0]}"><b>${esc(s[1])}</b><small>${s[2]}</small></div>`).join('')}</div>`;
+  if(it.imdb&&D.cfg.omdb&&!it.sc.imdb)h+=`<button class="btn" style="margin-bottom:12px" onclick="loadScores('${id}')">Scores laden</button>`;
+  if(it.ov)h+=`<p class="ov">${esc(it.ov)}</p>`;
+  if((it.type==='film'||it.type==='serie')&&it.tmdb&&D.cfg.tmdb)h+=`<p class="sub" id="prov">Streaming-Anbieter werden geladen …</p>`;
+  if(it.type==='serie'){
+    const pts=L.filter(e=>e.r.s).sort((a,b)=>a.r.s-b.r.s||a.r.e-b.r.e);
+    if(pts.length>=1){const d=pts.map(e=>e.n),[lo,hi]=rateRange(d);h+=`<div class="sec">Verlauf</div><div class="hc" style="background:linear-gradient(170deg,${c[0]},${c[2]})"><p class="cap">Deine Bewertung je Folge</p>${chartSVG(d,pts.map(e=>e.lb),lo,hi,'Verlauf')}</div>`}
+    const ss=it.seasons.length?it.seasons:[...new Set(pts.map(e=>e.r.s))].sort((a,b)=>a-b).map(x=>({n:x,c:0}));
+    if(ss.length&&pts.length){
+      h+=`<div class="sec">Staffeln, Ø Note</div>`+ss.map(x=>{const q=pts.filter(e=>e.r.s===x.n),done=new Set(q.map(e=>e.r.e)).size,avg=q.length?q.reduce((a,e)=>a+e.n,0)/q.length:null;
+        return `<div class="sr2"><span>Staffel ${x.n}</span><u><i style="width:${avg===null?0:avg*10}%"></i></u><span>${done}${x.c?' von '+x.c:''} Folgen${avg!==null?' · Ø '+r1(avg):''}</span></div>`}).join('');
+    }
+    if(it.total)h+=`<div class="sec">Fortschritt</div><div class="pbar"><i style="width:${P.p*100}%"></i></div><p class="sub">${P.c} von ${it.total} Folgen bewertet</p>`;
+  }
+  if(it.type==='buch'){
+    h+=`<div class="sec">Fortschritt</div>${it.pages?`<div class="pbar"><i style="width:${P.p*100}%"></i></div>`:''}<p class="sub">${it.pages?`Seite ${it.page} von ${it.pages}`:`Seite ${it.page}`}</p><button class="btn" style="margin-bottom:12px" onclick="openPage('${id}')">Fortschritt eintragen</button>`;
+  }
+  if(it.type==='spiel'){
+    h+=`<div class="sec">Fortschritt</div><div class="pbar"><i id="pbi" style="width:${it.pct}%"></i></div><input type="range" min="0" max="100" step="5" value="${it.pct}" aria-label="Fortschritt in Prozent" oninput="setPct('${id}',this.value)" onchange="persist();refresh()"><p class="sub" id="pcl">${it.pct} % · ${r1(hoursOf(it))} Std. gespielt</p>`;
+  }
+  if(it.type==='film'&&it.runtime)h+=`<p class="sub">Laufzeit: ${it.runtime} Minuten</p>`;
+  h+=`<div class="sticky" style="position:static;padding-top:6px"><button class="btn pri" onclick="openRate('${id}'${it.type==='serie'?`,{s:${nextEp(it).s},e:${nextEp(it).e}}`:''})">${it.type==='serie'?'Folge bewerten':L.length?'Erneut bewerten':'Bewertung hinzufügen'}</button></div>`;
+  if(L.length){
+    h+=`<div class="sec">Bewertungen</div><div class="card plain" style="padding:4px 14px">${L.map(e=>`<div class="rl"><div><b>${esc(e.lb||'Bewertung')}</b><small>${e.dt.toLocaleDateString('de-DE',{day:'numeric',month:'short',year:'numeric'})}${e.h?' · '+r1(e.h)+' Std.':''}${e.r.note?' · '+esc(e.r.note):''}</small></div><span class="sb ${e.n>=9?'hi':e.n>=7?'mid':'lo'}">${e.n}</span><button class="del" aria-label="Bewertung löschen" onclick="delRating('${e.r.id}')">✕</button></div>`).join('')}</div>`;
+  }
+  h+=`<div class="sec">Notiz</div><textarea class="in" maxlength="2000" placeholder="Deine Gedanken dazu" oninput="setNote('${id}',this.value)">${esc(it.note)}</textarea>
+  <div style="height:14px"></div><button class="btn" onclick="openEdit('${id}')">Bearbeiten</button><button class="btn dng" onclick="delItem('${id}')">Löschen</button>`;
+  return h;
+}
+function setStatus(id,s){const it=item(id);if(!it)return;it.status=s;if(s==='Fertig'){if(it.type==='buch'&&it.pages)it.page=it.pages;if(it.type==='spiel')it.pct=100}persist();refresh()}
+function setPrio(id,p){const it=item(id);if(!it)return;it.prio=p;persist();refresh()}
+function setPct(id,v){const it=item(id);if(!it)return;it.pct=Math.max(0,Math.min(100,parseInt(v)||0));const a=$('#pbi'),b=$('#pcl');if(a)a.style.width=it.pct+'%';if(b)b.textContent=it.pct+' % · '+r1(hoursOf(it))+' Std. gespielt'}
+let nT=0;function setNote(id,v){const it=item(id);if(!it)return;it.note=v.slice(0,2000);clearTimeout(nT);nT=setTimeout(persist,400)}
+function delRating(rid){if(!confirm('Diese Bewertung löschen?'))return;D.R=D.R.filter(r=>r.id!==rid);persist();refresh()}
+function delItem(id){
+  const it=item(id);if(!it)return;
+  if(!confirm(`„${it.title}“ und alle Bewertungen dazu löschen?`))return;
+  D.items=D.items.filter(x=>x.id!==id);D.R=D.R.filter(r=>r.i!==id);persist();closeS('dt');refresh();toast('Gelöscht');
+}
+
+/* ===== Merkliste ===== */
+let wt='Alle';
+function wishRender(){
+  const L=D.items.filter(x=>x.status==='Geplant'&&(wt==='Alle'||x.type===wt)).sort((a,b)=>b.prio-a.prio||b.created-a.created);
+  $('#wl-b').innerHTML=`<div class="cr">${['Alle',...TK].map(k=>`<button class="${wt===k?'on':''}" onclick="wt='${k}';wishRender()">${k==='Alle'?'Alle':TY[k].p}</button>`).join('')}</div>`+
+    (L.length?`<div class="sr">${L.map((it,i)=>`<div class="ent" style="grid-template-columns:44px 1fr auto" role="button" tabindex="0" onclick="openItem('${it.id}')" onkeydown="if(event.key==='Enter')this.click()">${thumb(it,i)}<div class="et"><b>${esc(it.title)}</b><small>${TY[it.type].n}${it.genre?' · '+esc(it.genre):''}${it.y?' · '+it.y:''}</small></div><button class="star" aria-label="Priorität ändern" onclick="event.stopPropagation();cyclePrio('${it.id}')">${it.prio?'★'.repeat(it.prio):'☆'}</button></div>`).join('')}</div>`
+      :'<div class="empty" style="margin:0">Deine Merkliste ist leer. Setze einen Titel auf „Geplant“, dann erscheint er hier.</div>');
+}
+function cyclePrio(id){const it=item(id);if(!it)return;it.prio=(it.prio+1)%4;persist();refresh()}
+
+/* ===== Statistik ===== */
+let stY=0;
+function statRender(){
+  const b=$('#st-b'),n=E.length;
+  if(!n){b.innerHTML='<div class="empty" style="margin:0">Noch keine Bewertungen. Sobald du etwas bewertest, erscheinen hier deine Zahlen.</div>';return}
+  const avg=E.reduce((a,e)=>a+e.n,0)/n,hrs=E.reduce((a,e)=>a+e.h,0);
+  let h=`<div class="tiles t2">${[[D.items.length,'Titel im Log'],[n,'Bewertungen'],[r1(avg),'Durchschnittsnote'],[r1(hrs),'Stunden gesamt']].map(t=>`<div class="tile"><b>${t[0]}</b><small>${t[1]}</small></div>`).join('')}</div>`;
+  const top=D.items.map(it=>({it,n:inote(it)})).filter(x=>x.n!==null).sort((a,b)=>b.n-a.n||lastTs(b.it)-lastTs(a.it)).slice(0,10);
+  h+=`<div class="sec">Top 10</div><div class="sr">${top.map((x,i)=>libRow(x.it,i,true)).join('')}</div>`;
+  const g={};E.forEach(e=>{const o=g[e.g]||(g[e.g]={h:0,s:0,c:0});o.h+=e.h;o.s+=e.n;o.c++});
+  const gs=Object.entries(g).sort((a,b)=>b[1].h-a[1].h||b[1].c-a[1].c).slice(0,8),mx=Math.max(...gs.map(x=>x[1].h),.01);
+  h+=`<div class="sec">Genres</div><div class="card plain">${gs.map(([k,o])=>`<div class="gb"><span>${esc(k)}</span><u><i style="width:${Math.max(4,o.h/mx*100)}%;background:${gcol(k)}"></i></u><span>Ø ${r1(o.s/o.c)} · ${r1(o.h)} Std.</span></div>`).join('')}</div>`;
+  const ys=[...new Set(E.map(e=>e.dt.getFullYear()))].sort((a,b)=>b-a);
+  if(!ys.includes(stY))stY=ys[0];
+  const mc=Array(12).fill(0);E.filter(e=>e.dt.getFullYear()===stY).forEach(e=>mc[e.dt.getMonth()]++);
+  const mm=Math.max(...mc,1);
+  h+=`<div class="sec">Verlauf pro Jahr</div><div class="cr">${ys.map(y=>`<button class="${stY===y?'on':''}" onclick="stY=${y};statRender()">${y}</button>`).join('')}</div><div class="card plain"><p class="sub">Bewertungen pro Monat</p><div class="hist">${mc.map((c,i)=>`<div><span>${c||''}</span><i style="height:${c?Math.max(c/mm*72,6):2}px;opacity:${c?1:.3}"></i><span>${'JFMAMJJASOND'[i]}</span></div>`).join('')}</div></div>`;
+  b.innerHTML=h;
+}
+
+/* ===== Einstellungen und Backup ===== */
+function setRender(){
+  const b=$('#se-b'),c=D.cfg;
+  const key=(k,label,help,url)=>`<label class="fl"><span>${label}</span><input class="in" value="${esc(c[k])}" placeholder="Key einfügen" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="setKey('${k}',this.value)"></label><p class="warn" style="margin-top:-8px">${help} <a href="${url}" target="_blank" rel="noopener noreferrer">Key holen</a> · <a href="#" onclick="testKey('${k}');return false">Testen</a></p>`;
+  b.innerHTML=`<div class="sec" style="margin-top:0">Datenbanken (kostenlose Keys)</div>
+  <p class="sub">Die Keys liegen nur in diesem Browser und sind nicht im Backup enthalten.</p>
+  ${key('tmdb','TMDB: Filme und Serien','Poster, Staffeln, Streaming.','https://www.themoviedb.org/settings/api')}
+  ${key('omdb','OMDb: IMDb, Rotten Tomatoes, Metacritic','Scores zu Filmen und Serien.','https://www.omdbapi.com/apikey.aspx')}
+  ${key('rawg','RAWG: Spiele','Cover, Plattform, Metacritic.','https://rawg.io/apidocs')}
+  <p class="warn">Bücher brauchen keinen Key (Open Library). Letterboxd bietet keinen offenen Zugang.</p>
+  <div class="sec">Darstellung</div>
+  <div class="seg t3">${[['auto','Auto'],['light','Hell'],['dark','Dunkel']].map(x=>`<button class="${c.theme===x[0]?'on':''}" onclick="setTheme('${x[0]}')">${x[1]}</button>`).join('')}</div>
+  <div class="sec">Backup</div>
+  <p class="sub">${lbText()}. Sichere regelmäßig, denn die Daten liegen nur in diesem Browser.</p>
+  <div class="cr"><button onclick="bkCopy()">Kopieren</button><button onclick="bkFile()">Als Datei sichern</button><button onclick="$('#bkf').click()">Datei wählen</button></div>
+  <input type="file" id="bkf" accept=".json,application/json,text/plain" hidden onchange="bkRead(this)">
+  <textarea class="in" id="bkt" spellcheck="false" aria-label="Backup-Text" placeholder="Backup-Text zum Wiederherstellen hier einfügen"></textarea>
+  <div style="height:10px"></div><button class="btn" onclick="bkRestore()">Aus Text wiederherstellen</button>
+  <div class="sec">Daten</div><button class="btn dng" onclick="wipe()">Alle Daten löschen</button>`;
+  $('#bkt').value=bkJSON();
+}
+function setKey(k,v){v=v.trim();if(/^[\w\-.]{0,800}$/.test(v)){D.cfg[k]=v;persist()}}
+async function testKey(k){
+  const v=D.cfg[k];if(!v){toast('Bitte zuerst einen Key eintragen');return}
+  try{
+    if(k==='tmdb')await tm('/configuration');
+    else if(k==='omdb'){const d=await jget('https://www.omdbapi.com/?'+new URLSearchParams({i:'tt0111161',apikey:v}));if(d.Response!=='True')throw new Error('401')}
+    else await jget('https://api.rawg.io/api/games?'+new URLSearchParams({key:v,page_size:'1'}));
+    toast('Der Key funktioniert');
+  }catch(e){toast('Der Key wird nicht akzeptiert oder es gibt keine Verbindung')}
+}
+function setTheme(t){D.cfg.theme=t;persist();applyTheme();setRender()}
+const bkJSON=()=>JSON.stringify({app:'noels-log',v:1,items:D.items,R:D.R});
+function bkMark(){D.lb=Date.now();persist()}
+function bkCopy(){
+  const t=$('#bkt');t.value=bkJSON();t.select();
+  const ok=()=>{bkMark();toast('Backup kopiert. Bewahre den Text sicher auf.')};
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t.value).then(ok).catch(()=>{try{document.execCommand('copy');ok()}catch(e){toast('Kopieren nicht möglich. Markiere den Text selbst.')}});
+  else{try{document.execCommand('copy');ok()}catch(e){toast('Kopieren nicht möglich. Markiere den Text selbst.')}}
+}
+function bkFile(){
+  try{
+    const a=document.createElement('a'),u=URL.createObjectURL(new Blob([bkJSON()],{type:'application/json'}));
+    a.href=u;a.download='noels-log-backup-'+todayStr()+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),2000);bkMark();toast('Backup-Datei erstellt');
+  }catch(e){toast('Dateidownload nicht möglich. Nutze „Kopieren“.')}
+}
+function bkRead(inp){
+  const f=inp.files&&inp.files[0];if(!f)return;
+  if(f.size>20e6){toast('Die Datei ist zu groß');return}
+  const r=new FileReader();r.onload=()=>{$('#bkt').value=String(r.result||'');bkRestore()};r.readAsText(f);inp.value='';
+}
+function bkRestore(){
+  let p;try{p=JSON.parse($('#bkt').value)}catch(e){toast('Das ist kein gültiges Backup');return}
+  if(!p||!Array.isArray(p.items)){toast('Das ist kein gültiges Backup');return}
+  const nd=sane(p);
+  if(!confirm(`${nd.items.length} Titel und ${nd.R.length} Bewertungen wiederherstellen? Die aktuellen Daten werden ersetzt.`))return;
+  nd.cfg=D.cfg;nd.lb=D.lb;D=nd;persist();refresh();setRender();toast('Backup wiederhergestellt');
+}
+function wipe(){
+  if(!confirm('Alle Titel und Bewertungen unwiderruflich löschen? Mach vorher ein Backup.'))return;
+  D.items=[];D.R=[];persist();closeS('se');refresh();toast('Alle Daten gelöscht');
+}
+
+/* ===== Bewegung ===== */
+let RV=[];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function refreshRV(){RV=[...document.querySelectorAll('.rv')];onScroll()}
+function onScroll(){
+  const vh=innerHeight;
+  document.documentElement.style.setProperty('--sy',RM||view!=='home'?0:Math.min(scrollY,700));
+  RV.forEach(el=>{
+    const t=el.getBoundingClientRect().top,p=RM?1:Math.min(Math.max((vh-t)/(vh*.38),0),1),q=1-Math.pow(1-p,3);
+    el.style.setProperty('--rs',(.88+.12*q).toFixed(3));
+    el.style.setProperty('--ry',((1-q)*28).toFixed(1)+'px');
+    el.style.setProperty('--ro',(.25+.75*q).toFixed(2));
+  });
+  document.querySelectorAll('.pc').forEach(el=>{const r=el.getBoundingClientRect(),d=Math.abs(r.left+r.width/2-innerWidth/2)/innerWidth;el.style.setProperty('--cs',RM?1:(1-Math.min(d,.6)*.2).toFixed(3))});
+}
+let tk=false;const req=()=>{if(!tk){tk=true;requestAnimationFrame(()=>{tk=false;onScroll()})}};
+addEventListener('scroll',req,{passive:true});addEventListener('resize',req);
+$('#strip').addEventListener('scroll',req,{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');fill(x.target)}}),{threshold:.25});
+document.querySelectorAll('.card.rv').forEach(c=>io.observe(c));
+let tl=null;
+function untilt(){if(tl){tl.style.removeProperty('--tx');tl.style.removeProperty('--ty');tl.style.removeProperty('--ps');tl=null}}
+function tilt(e){
+  if(RM)return;
+  const el=e.target.closest&&e.target.closest('.pc,.tile');
+  if(tl&&tl!==el)untilt();
+  if(!el)return;
+  tl=el;const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+  el.style.setProperty('--ty',(x*16).toFixed(1)+'deg');el.style.setProperty('--tx',(-y*16).toFixed(1)+'deg');el.style.setProperty('--ps','.97');
+}
+document.addEventListener('pointerdown',tilt);document.addEventListener('pointermove',tilt);
+['pointerup','pointercancel'].forEach(t=>document.addEventListener(t,untilt));
+
+/* ===== Alles neu zeichnen ===== */
+function refresh(){
+  derive();
+  if(sel!=='all'&&!E.some(e=>e.k===sel))sel='all';
+  hero();strip();weeksBar();log();overview();
+  if(view==='lib')libRender();
+  if(isOpen('sd'))search();
+  if(isOpen('wl'))wishRender();
+  if(isOpen('st'))statRender();
+  if(isOpen('dt'))detRender();
+  refreshRV();
+}
+load();applyTheme();navSet();refresh();
+if(D.items.length>=3&&(!D.lb||Date.now()-D.lb>30*DAY)&&Date.now()-D.rm>DAY){D.rm=Date.now();persist();setTimeout(()=>toast('Tipp: Mach ein Backup unter Mehr, Einstellungen.'),1500)}
+</script></body></html>
